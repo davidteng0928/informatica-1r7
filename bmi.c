@@ -1,36 +1,33 @@
-#include <stdio.h>                                   // teng david 418172//
- 
+#include <stdio.h>
+
 int main(void)
 {
- int peso;
- float altura;
- float IMC;
-    printf("CALCULADORA IMC\n");
-    printf("INGRESAR TU PESO:");
-    scanf("%d", &peso);
-    printf("INGRESAR TU ALTURA:");
-    scanf("%f", &altura);
+    int nota;
+    printf("CLASIFICADOR DE NOTAS\n");
+    printf("ingresar nota:");
+    scanf("%d", &nota );
     
-IMC =  (float)peso / ( altura * altura );
-    printf("TU IMC ES: %.2f \n", IMC);
-    
-    if ( IMC<18.5){
-    printf("TU IMC: bajo peso");
+    if (nota>=90){
+        printf("Calificación: A");
     }
-    else if ( IMC>=18.5 && IMC<=24.9){
-    printf("TU IMC: peso normal");
+    else if (nota>=80 && nota<90){
+        printf("Calificación: B");
     }
-    else if (IMC>=25.0 && IMC<=29.9 ){
-    printf("TU IMC: Sobrepeso");
+    else if (nota>=70 && nota<80){
+        printf("Calificación: C");
     }
-    else if( IMC>=30 ){
-    printf("TU IMC: Obesidad");
+    else if (nota>=60 && nota<70){
+        printf("Calificación: D");
+    }
+    else if (nota<60){
+        printf("Calificación: F");
     }
     
-    printf("\nINDICE    \t CONDICION\n");
-    printf(">18.5       \t bajo peso\n");
-    printf("18.5 a 24.9 \t peos normal\n");
-    printf("25.0 a 29.9 \t sobrepeso\n");
-    printf(">30         \t Obesidad");
+    printf("\nTABLA DE CALIFICACIONES:\n");
+    printf(">= 90       \tCalificación A\n");
+    printf("80 - 89     \tCalificación B\n");
+    printf("70 - 79     \tCalificación C\n");
+    printf("60 - 69     \tCalificación D\n");
+    printf("< 60        \tCalificación F\n");
     return 0;
 }
